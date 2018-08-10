@@ -1,0 +1,7 @@
+<h1>Photos</h1>
+
+<%= paginate @photos %>
+
+<% @photos.each do |photo| %>
+  <%= render 'photo', photo: photo %>
+<% end %>

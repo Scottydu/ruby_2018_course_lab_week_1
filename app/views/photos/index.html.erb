@@ -1,0 +1,11 @@
+<center><h1>Photo Timeline</h1>
+<p>Enjoy these great photos!</p></center>
+<% @photos.each do |photo| %>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag(photo.url, class: 'card-img-top') %>
+    <div class="card-body">
+      <h5 class="card-title"><%= photo.username %></h5>
+      <p class="card-text"><%= photo.caption %></p>
+    </div>
+  </div>
+<% end %>

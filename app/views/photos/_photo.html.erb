@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <%= image_tag(photo.url, class: 'card-img-top') %>
+  <div class="card-body">
+    <h5 class="card-title"><%= photo.username %></h5>
+    <p class="card-text"><%= photo.caption %></p>
+    <h5>Comments <small><%= photo.comments.size %> comments</small></h5>
+    <% photo.comments.each do |comment| %>
+      <%= render 'comment', comment: comment %>
+    <% end %>
+  </div>
+</div>
